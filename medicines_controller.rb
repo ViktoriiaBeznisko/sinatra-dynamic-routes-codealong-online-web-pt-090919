@@ -4,3 +4,8 @@ get '/goodbye/:name'/goodbye/:' do
   end.first
   erb :'/goodbye/show.html'
 end
+
+  get "/goodbye/:name" do
+    @user_name = params[:name]
+    "goodbye #{@user_name}!"
+  end
